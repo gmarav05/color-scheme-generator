@@ -25,9 +25,6 @@ colorBtn.addEventListener('click', function(e){
     e.preventDefault()
     
     colorEl.substring(1)
-    mode.toLowerCase()
-    console.log(colorEl)
-    console.log(mode)
 
     fetch (`https://www.thecolorapi.com/scheme?hex=${colorEl}&mode=${mode}`)
     .then(response => response.json())
