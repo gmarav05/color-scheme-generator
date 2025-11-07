@@ -8,7 +8,7 @@ let color3 = document.getElementById('c3')
 let color4 = document.getElementById('c4')
 let color5 = document.getElementById('c5')
 
-let colorEl = '00000'
+let colorEl = '000000'
 
 getColor.addEventListener('change', function(e){
     colorEl = e.target.value.substring(1)
@@ -44,7 +44,27 @@ colorBtn.addEventListener('click', function(e){
         document.getElementById('hex3').textContent = data.colors[2].hex.value
         document.getElementById('hex4').textContent = data.colors[3].hex.value
         document.getElementById('hex5').textContent = data.colors[4].hex.value
+
         
+        color1.addEventListener('click',function(){
+            navigator.clipboard.writeText(data.colors[0].hex.value);
+        })
+
+        color2.addEventListener('click',function(){
+            navigator.clipboard.writeText(data.colors[1].hex.value);
+        })
+
+        color3.addEventListener('click',function(){
+            navigator.clipboard.writeText(data.colors[2].hex.value);
+        })
+
+        color4.addEventListener('click',function(){
+            navigator.clipboard.writeText(data.colors[3].hex.value);
+        })
+
+        color5.addEventListener('click',function(){
+            navigator.clipboard.writeText(data.colors[4].hex.value);
+        })
             
     })
 
