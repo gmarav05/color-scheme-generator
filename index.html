@@ -11,14 +11,67 @@
 </head>
 <body>
     <h1>Color Scheme Generator</h1>
-    <div class="container">
+        <div class="container">
 
-        <div class="color-box">
-            <input type="color"/>
+            <nav>
+                <div class="color-box">
+    
+                    <input type="color" class="color-picker" id="color-el"/>
+
+                    <select id="color-type" value="monochrome">
+    
+                        <option class="optionEl" value="monochrome">
+                            <span class="option-label">Monochrome</span>
+                        </option>
+    
+                        <option class="optionEl" value="monochrome-dark">
+                            <span class="option-label">Monochrome-dark</span>
+                        </option>
+    
+                        <option class="optionEl" value="monochrome-light">
+                            <span class="option-label">Monochrome-light</span>
+                        </option>
+    
+                        <option class="optionEl" value="analogic">
+                            <span class="option-label">Analogic</span>
+                        </option>
+    
+                        <option class="optionEl" value="complement">
+                            <span class="option-label">Complement</span>
+                        </option>
+    
+                        <option class="optionEl" value="analogic-complement">
+                            <span class="option-label">Analogic-complement</span>
+                        </option>
+    
+                        <option class="optionEl" value="triad">
+                            <span class="option-label">Triad</span>
+                        </option>
+    
+                    </select>
+    
+                    <button id="get-scheme-btn">Get Color Scheme</button>
+    
+                </div>
+            </nav>
+
+            <div class="color-scheme" id="color-scheme">
+                <div class="c1" id="c1"></div>
+                <div class="c2" id="c2"></div>
+                <div class="c3" id="c3"></div>
+                <div class="c4" id="c4"></div>
+                <div class="c5" id="c5"></div>
+            </div>
+
+            <div class="hex-values">
+                <p class="hex-1" id="hex1"></p>
+                <p class="hex-2" id="hex2"></p>
+                <p class="hex-3" id="hex3"></p>
+                <p class="hex-4" id="hex4"></p>
+                <p class="hex-5" id="hex5"></p>
+            </div>
+
         </div>
-
-
-    </div>
     
 </body>
 <script src="app.js"></script>
