@@ -32,19 +32,12 @@ colorBtn.addEventListener('click', function(e){
     fetch (`https://www.thecolorapi.com/scheme?hex=${colorEl}&mode=${mode}`)
     .then(response => response.json())
     .then(data => {
-        console.log(data)
-        console.log(data.colors[0].hex.value)
-        console.log(data.colors[0].hex.value)
         
             color1.style.backgroundColor = data.colors[0].hex.value
             color2.style.backgroundColor = data.colors[1].hex.value
             color3.style.backgroundColor = data.colors[2].hex.value
             color4.style.backgroundColor = data.colors[3].hex.value
             color5.style.backgroundColor = data.colors[4].hex.value
-
-
-            console.log(colorText1)
-
 
         document.getElementById('hex1').textContent = data.colors[0].hex.value
         document.getElementById('hex2').textContent = data.colors[1].hex.value
@@ -53,7 +46,6 @@ colorBtn.addEventListener('click', function(e){
         document.getElementById('hex5').textContent = data.colors[4].hex.value
         
             
-
     })
 
 })
